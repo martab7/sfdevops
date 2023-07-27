@@ -1,0 +1,123 @@
+img {
+    max-width: 50%;
+    max-height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+.container {
+    max-width: 95%;
+    /* border: solid black 1px; */
+    padding: .25rem;
+    min-height: 500px;
+}
+
+input[type="text"],
+input[type="email"] {
+    background: #F4F4F4;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+}
+
+button {
+    width: 150px;
+    background: #FF740B;
+    color: white;
+    border: none;
+    padding: .5rem .1rem;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #112B4A;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #009EDB;
+}
+
+label {
+    font-size: .75rem;
+    color: #112B4A;
+    margin-left: .5rem;
+}
+
+.opt-in-check {
+    display: flex;
+    align-content: center;
+}
+
+.successMessage {
+    color: #112B4A;
+}
+
+.spinnerContainer {
+    position: relative;
+    min-height: 500px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 50%;
+    }
+  }
+/* .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    align-self: center;
+    margin-top: .5rem;
+    min-width: 50%;
+}
+
+img {
+    max-width: 50%;
+    max-height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+
+
+input {
+    background: #F4F4F4;
+    border: none;
+    padding: 1rem;
+}
+
+button {
+    width: 150px;
+    background: #FF740B;
+    color: white;
+    border: none;
+    padding: .5rem .1rem;
+}
+
+.longInput {
+    min-width:  100%;
+}
+
+.shortInput {
+    min-width: 48%;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+} */
