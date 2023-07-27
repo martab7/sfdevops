@@ -1,0 +1,108 @@
+<template>
+    <template if:true={flowCompleted}>
+        <template if:false={isSuccess}>
+            <template if:false={isError}>
+                <div class="container slds-align_absolute-center">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div>
+                                <img src={imageURL} alt="Subscribe To MRE">
+                            </div>
+                            <h2>Subscribe To Learn More About</h2>
+                            <h1>Salesforce Marketing Cloud</h1>
+                        </div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-2 slds-m-top_medium">
+                                <input 
+                                    type="text" 
+                                    placeholder="First Name" 
+                                    autocomplete="off" 
+                                    onchange={handleInputChange}
+                                    name="firstName">
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-m-top_medium">
+                                <input 
+                                    type="text" 
+                                    placeholder="Last Name" 
+                                    autocomplete="off" 
+                                    onchange={handleInputChange}
+                                    name="lastName">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                                <input 
+                                    type="email" 
+                                    placeholder="Email" 
+                                    autocomplete="off" 
+                                    onchange={handleInputChange}
+                                    name="email">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                                <input 
+                                    type="text" 
+                                    placeholder="Company" 
+                                    autocomplete="off" 
+                                    onchange={handleInputChange}
+                                    name="company">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 opt-in-check slds-m-top_medium">
+                                <input type="checkbox" id="opt" name="isOptedIn" onchange={handleInputChange} checked>
+                                <label for="opt">Yes, I want to receive Marketing Cloud emails from MRE Consulting.</label>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                                <!-- <c-re-c-a-p-t-c-h-a-l-w-c ongrecaptcharender={handleCaptchaReceived}></c-re-c-a-p-t-c-h-a-l-w-c> -->
+<!-- <template> -->
+    <!-- <h2>v2Checkbox Demo LWC</h2> -->
+    <!-- <br /> -->
+    <!-- <div class="recaptchaCheckbox"></div> -->
+    <!-- <br /> -->
+    <!-- <lightning-button onclick={doSubmit} label="Submit"></lightning-button> -->
+                                <button class="slds-m-left_large" onclick={handleSubmit}>SUBMIT</button>
+                                <!-- <button if:true={allowSubmit} class="slds-m-left_large" onclick={handleSubmit}>SUBMIT</button> -->
+                                <!-- <button if:false={allowSubmit} class="slds-m-left_large" onclick={handleSubmit} disabled>NO</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </template>
+        <template if:true={isError}>
+            <h2 style="color: red;">Error. Please contact AT</h2>
+        </template>
+    
+        <template if:true={isSuccess}>
+            <h2 class="successMessage">Someone from MRE will be reaching out to you. Thank you for your interest!</h2>
+        </template>
+    </template>
+    <template if:false={flowCompleted}>
+        <div class="spinnerContainer">
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </div>
+    </template>
+
+    
+
+    <!-- <div class="container">
+        <div class="row">
+            <img src={imageURL} alt="Subscribe To MRE">
+            <h2>Subscribe To Learn More About</h2>
+            <h1>Salesforce Marketing Cloud</h1>
+        </div>
+
+        <div class="row box">
+            <input class="shortInput" type="text" placeholder="First Name" autocomplete="off" onchange={handleFirstNameChange}>
+            <input class="shortInput" type="text" placeholder="Last Name" autocomplete="off" onchange={handleLastNameChange}>
+        </div>
+
+        <div class="row">
+            <input class="longInput" type="email" placeholder="Email" autocomplete="off" onchange={handleEmailChange}>
+        </div>
+
+        <div class="row">
+            <input class="longInput" type="text" placeholder="Company" autocomplete="off" onchange={handleCompanyChange}>
+        </div>
+
+        <div class="row">
+            <button onclick={handleSubmit}>SUBMIT</button>
+        </div>
+    </div> -->
+</template>
